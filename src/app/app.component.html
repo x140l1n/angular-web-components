@@ -1,1 +1,14 @@
-<h1>Hello World</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <xiao-input type="text" label="First Name" placeholder="First Name" [formControl]="firstname" ngDefaultControl />
+  <xiao-input type="text" label="Last Name" placeholder="Last Name" [formControl]="lastname" ngDefaultControl />
+  <xiao-input type="email" label="Email" placeholder="Email" [formControl]="email" ngDefaultControl />
+  <div *ngIf="email.errors?.['email']">Invalid email</div>
+  <button type="submit">Submit</button>
+</form>
+
+<div class="output">
+  <h3>Output</h3>
+  <p>{{ firstname.value }}</p>
+  <p>{{ lastname.value }}</p>
+  <p>{{ email.value }}</p>
+</div>
