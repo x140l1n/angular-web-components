@@ -12,3 +12,8 @@
   <p>{{ lastname.value }}</p>
   <p>{{ email.value }}</p>
 </div>
+
+<div *ngIf="form.valid && isSubmitted" class="output">
+  <h3>Form Value</h3>
+  <pre>{{ form.value | json }}</pre>
+</div>
