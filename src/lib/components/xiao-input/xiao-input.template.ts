@@ -9,7 +9,7 @@ export const template = (component: XiaoInput) => {
         id="input"
         type="${component.type}"
         placeholder="${component.placeholder}"
-        .value=${component.value}
+        value=${component.value}
         @input="${component.handleInput}"
       />
     </div>
